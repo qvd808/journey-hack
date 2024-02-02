@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-
+// import './styles.css';
 
 
 const MainPage = () => {
@@ -10,10 +10,13 @@ const MainPage = () => {
     }
 
     return (
-        <div className="MainPage">
 
-            <p>Main page</p>
-            <button onClick={moveToWateringPage}>Get Started</button>
+        <div className="MainPage">
+            <img className="h-screen w-full relative" src="./naturebackground.jpeg"></img>
+            <div className="absolute top-0 left-0">
+                <h1>hiHIHIHIHIHI</h1>
+                <button onClick={moveToWateringPage}>Get Started</button>
+            </div>
 
         </div>
     )
