@@ -17,7 +17,7 @@ const WateringPage = () => {
         src="./naturebackground.jpeg"
       ></img>
       <div className="absolute top-0 left-0">
-        <h1>hi</h1>
+        <h1 className=""></h1>
       </div>
     </div>
   );
