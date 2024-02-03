@@ -81,7 +81,7 @@ const MeditationPage = () => {
       ></img>
       <div className="absolute top-0 left-0 w-screen">
         <div className="flex flex-row justify-center">
-          <div className="border-4 border-black rounded-lg shadow-2xl w-4/5 bg-white p-2 my-5 font-bold text-center">
+          <div className="border-2 border-black rounded-lg shadow-2xl w-4/5 bg-white p-2 my-5 font-bold text-center">
             <p className="text-welcomeMeditate">{welcome}</p>
             <p className="text-welcomeMeditate">
               After completing an exercise, take a moment to{" "}
@@ -92,7 +92,7 @@ const MeditationPage = () => {
         </div>
 
         <div className="grid grid-cols-2 mt-[7%]">
-          <div className="relative w-96 border-4 border-black rounded-lg shadow-2xl bg-white align-self-start justify-self-center p-2 my-5 font-bold">
+          <div className="relative w-96 border-2 border-black rounded-lg shadow-2xl bg-white align-self-start justify-self-center p-2 my-5 font-bold">
             <p className="text-welcomeMeditate p-3">{exercise}</p>
           </div>
           <img className="justify-self-center" src={treeImagePath}></img>
@@ -100,7 +100,7 @@ const MeditationPage = () => {
 
         <div className="flex flex-row justify-center mt-[5%]">
           <button
-            className="text-white border-4 border-black rounded-lg shadow-2xl bg-blue-500 font-bold p-3"
+            className="text-white border-2 border-black rounded-lg shadow-2xl bg-blue-500 font-bold p-3"
             onClick={moveToWateringPage}
           >
             Go to the watering page
