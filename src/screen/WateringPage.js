@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import lottie from "lottie-web";
 import Lottie from "lottie-react";
 import WateringAnimation from "./watering-animation.json";
-import { indexTree, setIndexTree } from "../data/data";
+import { indexTree, setIndexTree, treeName } from "../data/data";
 
 const WateringPage = () => {
   const [showAnimation, setShowAnimation] = useState(false);
@@ -99,6 +99,7 @@ const WateringPage = () => {
       <div className="absolute bottom-40 right-60">
         <div className="relative bottom-500 left-10">
           <img src={treeImagePath}></img>
+          <p className="relative bottom-500 left-0 font-bold text-white border-2 border-black rounded-lg shadow-xl p-4 bg-blue-600 text-center">{treeName[indexTree]}</p>
         </div>
       </div>
     </div>
