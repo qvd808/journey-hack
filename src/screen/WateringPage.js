@@ -7,6 +7,7 @@ import {indexTree, setIndexTree} from "../data/data";
 
 const WateringPage = () => {
   const [showAnimation, setShowAnimation] = useState(false);
+  const [showButton, setShowButton] = useState(true);
   const container = useRef(null);
 
   const navigate = useNavigate();
@@ -26,6 +27,7 @@ const WateringPage = () => {
 
   const growTree = () => {
     setShowAnimation(true);
+    setShowButton(false);
   };
 
   useEffect(() => {
@@ -73,9 +75,14 @@ const WateringPage = () => {
         <h1>with every breath.</h1>
       </div>
 
-      <div className="absolute top-[500px] left-[200px] text-3xl font-bold text-black border-2 border-black rounded-lg shadow-xl p-4 bg-white ">
-        <button onClick={growTree}>Show button</button>
-      </div>
+      {
+        showButton && (
+          <div className="absolute top-[500px] left-[200px] text-3xl font-bold text-black border-2 border-black rounded-lg shadow-xl p-4 bg-white ">
+          <button onClick={growTree}>Show button</button>
+        </div>
+        )
+      }
+
 
       {/* Position the Lottie animation */}
       {showAnimation && (
