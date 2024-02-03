@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 // import { getGPTResponse } from "../api/gptAPI";
 import OpenAI from "openai";
 import { list_of_exercises } from "../api/listExercise";
-import { indexTree } from "../data/data";
+import { indexTree, treeName } from "../data/data";
 
 const MeditationPage = () => {
   const [exercise, setExercise] = useState(() => {
@@ -46,7 +46,7 @@ const MeditationPage = () => {
             {
               role: "user",
               content:
-                "Can you help me generate one mediation exercise. Please output only 40 words for the answer. ",
+                "Can you help me generate one mediation exercise. Absolutely do not output over 40 words for the answer. ",
             },
           ],
           stream: true,
@@ -95,7 +95,10 @@ const MeditationPage = () => {
           <div className="relative w-96 border-2 border-black rounded-lg shadow-2xl bg-white align-self-start justify-self-center p-2 my-5 font-bold">
             <p className="text-welcomeMeditate p-3">{exercise}</p>
           </div>
+          <div className="justify-self-center" >
           <img className="justify-self-center" src={treeImagePath}></img>
+          <p className="justify-self-center font-bold text-amber-800 text-center text-xl">{treeName[indexTree]}</p>
+          </div>
         </div>
 
         <div className="flex flex-row justify-center mt-[5%]">

@@ -76,9 +76,27 @@ const WateringPage = () => {
       </div>
 
       {showButton && (
-        <div className="absolute top-[400px] left-[800px] font-bold text-white border-2 border-black rounded-lg shadow-xl p-4 bg-blue-500 ">
-          <button onClick={growTree}>Water tree</button>
+
+        indexTree === 6 ? (
+          <div
+          className="absolute top-[400px] left-[800px] font-bold text-white border-2 border-black rounded-lg shadow-xl p-4 bg-rose-700 "
+          onClick={growTree}
+        >
+          <button onClick={growTree}>{`Rebirth Tree`}</button>
+          
         </div>
+        ) : (
+          
+          <div
+          className="absolute top-[400px] left-[800px] font-bold text-white border-2 border-black rounded-lg shadow-xl p-4 bg-blue-500 "
+          onClick={growTree}
+        >
+          <button onClick={growTree}>{`Water Tree`}</button>
+          
+        </div>
+        )
+
+
       )}
 
       {/* Position the Lottie animation */}
@@ -99,7 +117,9 @@ const WateringPage = () => {
       <div className="absolute bottom-40 right-60">
         <div className="relative bottom-500 left-10">
           <img src={treeImagePath}></img>
-          <p className="relative bottom-500 left-0 font-bold text-green-600 shadow-xl p-4 bg-white text-center">{treeName[indexTree]}</p>
+          <p className="relative bottom-500 left-0 font-bold text-amber-800 text-center text-xl">
+            {treeName[indexTree]}
+          </p>
         </div>
       </div>
     </div>
