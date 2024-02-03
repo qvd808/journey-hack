@@ -10,14 +10,19 @@ const WateringPage = () => {
     navigate("/");
   };
 
+  // add logic such that the tree image path changes depending on the user
+  const treeImagePath = "tree5.png"
+
   return (
     <div className="">
       <img
         className="h-screen w-full relative"
-        src="./naturebackground.jpeg"
+        src="./wateringbackgroundimage.jpeg"
       ></img>
-      <div className="absolute top-0 left-0">
-        <h1 className=""></h1>
+      <div className="absolute bottom-40 right-80">
+        <div className="relative bottom-500 left-10">
+            <img src={treeImagePath} ></img>
+        </div>
       </div>
     </div>
   );
