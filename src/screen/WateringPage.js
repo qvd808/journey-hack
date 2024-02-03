@@ -99,7 +99,7 @@ const WateringPage = () => {
       <div className="absolute bottom-40 right-60">
         <div className="relative bottom-500 left-10">
           <img src={treeImagePath}></img>
-          <p className="relative bottom-500 left-0 font-bold text-white border-2 border-black rounded-lg shadow-xl p-4 bg-blue-600 text-center">{treeName[indexTree]}</p>
+          <p className="relative bottom-500 left-0 font-bold text-green-600 shadow-xl p-4 bg-white text-center">{treeName[indexTree]}</p>
         </div>
       </div>
     </div>
