@@ -1,5 +1,5 @@
 
-var indexTree = 1;
+var indexTree = 0;
 const setIndexTree = () => {
     indexTree = (indexTree + 1) % 7;
 }
