@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import lottie from "lottie-web";
 import Lottie from "lottie-react";
 import WateringAnimation from "./watering-animation.json";
-import {indexTree, setIndexTree} from "../data/data";
+import { indexTree, setIndexTree } from "../data/data";
 
 const WateringPage = () => {
   const [showAnimation, setShowAnimation] = useState(false);
@@ -43,7 +43,7 @@ const WateringPage = () => {
     instance.addEventListener("complete", () => {
       setShowAnimation(false);
       setIndexTree();
-    });  
+    });
     return () => {
       instance.destroy();
     };
@@ -62,27 +62,24 @@ const WateringPage = () => {
 
       <div className="absolute top-[5vh]">
         <div
-          className="ml-10 text-3xl font-bold text-black border-2 border-black rounded-lg shadow-xl p-4 bg-white"
+          className="ml-10 font-bold text-black border-2 border-black rounded-lg shadow-xl p-4 bg-white"
           onClick={moveToMeditationPage}
         >
           {str}
         </div>
       </div>
 
-      <div className="absolute top-[300px] left-[200px] text-3xl font-bold text-black border-2 border-black rounded-lg shadow-xl p-4 bg-white ">
+      <div className="absolute top-[100px] right-[200px] font-bold text-black border-2 border-black rounded-lg shadow-xl p-4 bg-white ">
         <h1>Congratulations!</h1>
         <h1>We hope you feel refreshed</h1>
         <h1>with every breath.</h1>
       </div>
 
-      {
-        showButton && (
-          <div className="absolute top-[500px] left-[200px] text-3xl font-bold text-black border-2 border-black rounded-lg shadow-xl p-4 bg-white ">
-          <button onClick={growTree}>Show button</button>
+      {showButton && (
+        <div className="absolute top-[400px] left-[800px] font-bold text-white border-2 border-black rounded-lg shadow-xl p-4 bg-blue-500 ">
+          <button onClick={growTree}>Water tree</button>
         </div>
-        )
-      }
-
+      )}
 
       {/* Position the Lottie animation */}
       {showAnimation && (
