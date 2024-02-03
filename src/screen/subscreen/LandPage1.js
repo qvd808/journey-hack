@@ -18,7 +18,7 @@ const LandPage1 = () => {
       <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-between">
         <div className="flex flex-row justify-center mt-[10vh]">
           <div className="w-[80vw] px-7 py-2  border-4 border-black rounded-md shadow-lg bg-white">
-            <Typewriter text="Weelcome to Sproutful. This app is designed for you to practice mindfulness breathing exercises each day. As you progress, watch your very own mental tree grow. 😃" />
+            <Typewriter text="Weelcome to Sproutful AI. This app is designed for you to practice mindfulness through AI-guided breathing exercises. As you progress, watch your very own mental tree grow. 😃" />
           </div>
         </div>
         <img className="w-[50wh] mx-auto" src="tree4.png"></img>

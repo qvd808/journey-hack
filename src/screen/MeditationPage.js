@@ -70,7 +70,7 @@ const MeditationPage = () => {
   }, []);
 
   const welcome = `
-  Welcome to Day 1 of your breathing journey! Follow the directions below to nurture mindfulness.
+  Welcome to your breathing journey! Follow the directions below to nurture mindfulness.
   `;
 
   return (
@@ -84,23 +84,25 @@ const MeditationPage = () => {
           <div className="border-4 border-black rounded-lg shadow-2xl w-4/5 bg-white p-2 my-5 font-bold text-center">
             <p className="text-welcomeMeditate">{welcome}</p>
             <p className="text-welcomeMeditate">
-              After completing today's exercise, take a moment to reflect.
+              After completing an exercise, take a moment to{" "}
+              <span className="text-green-700">sprout</span> your tree in the
+              watering page.
             </p>
           </div>
-        </div>
-        <div className="flex flex-row justify-center">
-          <button
-            className="text-welcomeMeditate border-4 border-black rounded-lg shadow-2xl bg-white"
-            onClick={moveToWateringPage}
-          >
-            Go To the Watering Page
-          </button>
         </div>
 
         <div className="grid grid-cols-2 my-56">
           <div className="relative w-96 border-4 border-black rounded-lg shadow-2xl bg-white align-self-start justify-self-center p-2 my-5 font-bold">
             <p className="text-welcomeMeditate p-3">{exercise}</p>
           </div>
+        </div>
+        <div className="flex flex-row justify-center">
+          <button
+            className="text-welcomeMeditate border-4 border-black rounded-lg shadow-2xl bg-white font-bold p-2"
+            onClick={moveToWateringPage}
+          >
+            Go to the <span className="text-blue-700">watering</span> page
+          </button>
         </div>
 
         <div className="absolute bottom-40 right-80">
