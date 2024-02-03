@@ -79,26 +79,27 @@ const MeditationPage = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 my-56">
+        <div className="grid grid-cols-2 mt-[7%]">
           <div className="relative w-96 border-4 border-black rounded-lg shadow-2xl bg-white align-self-start justify-self-center p-2 my-5 font-bold">
             <p className="text-welcomeMeditate p-3">{exercise}</p>
           </div>
+          <img className="justify-self-center" src="tree1.png"></img>
         </div>
-        <div className="flex flex-row justify-center">
+
+        <div className="flex flex-row justify-center mt-[5%]">
           <button
-            className="text-welcomeMeditate border-4 border-black rounded-lg shadow-2xl bg-white font-bold p-2"
+            className="text-white border-4 border-black rounded-lg shadow-2xl bg-blue-500 font-bold p-3"
             onClick={moveToWateringPage}
           >
-            Go to the <span className="text-blue-700">watering</span> page
+            Go to the watering page
           </button>
         </div>
 
-        <div className="absolute bottom-40 right-80">
+        {/* <div className="absolute bottom-40 right-80">
           <div className="relative bottom-500 left-10">
             <img src="tree1.png"></img>
           </div>
-          {/* <div ref={container} id="animation-container"></div> */}
-        </div>
+        </div> */}
       </div>
     </div>
   );
