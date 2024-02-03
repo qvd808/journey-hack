@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        "welcomeMeditate": "#33A6A3"
+      }
+    },
   },
   plugins: [require("daisyui")],
 };
