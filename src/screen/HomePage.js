@@ -18,11 +18,11 @@ const HomePage = () => {
       <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-between">
         <div className="flex flex-row justify-center align-center mt-[20vh]">
           <div className="flex flex-col justify-center align-center items-center w-4/5 p-5 md:p-10 border-4 border-black bg-white rounded-lg ">
-            <h1 className="text-4xl md:text-9xl text-black font-bold ">
+            <h1 className="text-4xl md:text-9xl text-black font-bold mb-5">
               Sproutful
             </h1>
             <Typewriter
-              className="md:text-8xl"
+              className=""
               text="Cuultivate wellness with every breath"
             ></Typewriter>
           </div>
