@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 // import { getGPTResponse } from "../api/gptAPI";
 import OpenAI from "openai";
 import { list_of_exercises } from "../api/listExercise";
-import {indexTree} from "../data/data";
+import { indexTree } from "../data/data";
 
 const MeditationPage = () => {
   const [exercise, setExercise] = useState(() => {
@@ -95,7 +95,7 @@ const MeditationPage = () => {
           <div className="relative w-96 border-4 border-black rounded-lg shadow-2xl bg-white align-self-start justify-self-center p-2 my-5 font-bold">
             <p className="text-welcomeMeditate p-3">{exercise}</p>
           </div>
-          <img className="justify-self-center" src="tree1.png"></img>
+          <img className="justify-self-center" src={treeImagePath}></img>
         </div>
 
         <div className="flex flex-row justify-center mt-[5%]">
