@@ -75,29 +75,22 @@ const WateringPage = () => {
         <h1>with every breath.</h1>
       </div>
 
-      {showButton && (
-
-        indexTree === 6 ? (
+      {showButton &&
+        (indexTree === 6 ? (
           <div
-          className="absolute top-[400px] left-[800px] font-bold text-white border-2 border-black rounded-lg shadow-xl p-4 bg-rose-700 "
-          onClick={growTree}
-        >
-          <button onClick={growTree}>{`Rebirth Tree`}</button>
-          
-        </div>
+            className="absolute top-[400px] left-[750px] font-bold text-white border-2 border-black rounded-lg shadow-xl p-4 bg-rose-700 "
+            onClick={growTree}
+          >
+            <button onClick={growTree}>{`Rebirth Tree`}</button>
+          </div>
         ) : (
-          
           <div
-          className="absolute top-[400px] left-[800px] font-bold text-white border-2 border-black rounded-lg shadow-xl p-4 bg-blue-500 "
-          onClick={growTree}
-        >
-          <button onClick={growTree}>{`Water Tree`}</button>
-          
-        </div>
-        )
-
-
-      )}
+            className="absolute top-[400px] left-[750px] font-bold text-white border-2 border-black rounded-lg shadow-xl p-4 bg-blue-500 "
+            onClick={growTree}
+          >
+            <button onClick={growTree}>{`Water Tree`}</button>
+          </div>
+        ))}
 
       {/* Position the Lottie animation */}
       {showAnimation && (
