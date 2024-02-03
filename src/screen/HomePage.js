@@ -19,7 +19,7 @@ const HomePage = () => {
         <div className="flex flex-row justify-center align-center mt-[20vh]">
           <div className="flex flex-col justify-center align-center items-center w-4/5 p-5 md:p-10 border-4 border-black bg-white rounded-lg ">
             <h1 className="text-4xl md:text-9xl text-black font-bold mb-5">
-              Sproutful
+              <span className="text-green-700">Sproutful</span> AI
             </h1>
             <Typewriter
               className=""
