@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+## Introduction
+This is a project created for Hackathon Journey 2024. To use our app, please our [web app](https://journey-hack-6107f.web.app/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Inspiration
+Mental health is one of the most overlooked parts of self improvement. Part of this is due to the fact that working on our mental health through means such as meditation and breathing exercises is **boring**. Thus, many of us tend to ignore improving our mental health until it becomes too late. That got us thinking. What if we could make improving mental health less boring? Then certainly more people would do it! And that's where we got our idea to gameify breathing exercises to help people improve upon their mental wellbeing. 
 
-## Available Scripts
+## What it does
+Introducing SproutfulAI - a fun, AI powered mental wellness self improvement app. Users are guided through a brand new breathing exercise every time they enter our app (thanks to OpenAI's GPT Turbo 3.5 API). After the user completes the breathing exercise, they are rewarded with the opportunity to water their sprout, which grows each time it's watered. Our beautiful UI design combined with our fun sprout watering functionality encourages users to do their breathing exercises and provides an environment for them to do it in a much more entertaining manner
 
-In the project directory, you can run:
+- ✅ Different breathing exercises each time to keep users entertained (thanks to AI)
+- ✅ Watering the sprout is fun and motivates users to do their breathing exercises to improve mental health!
+- ✅ Beautiful UI design that relaxes and soothes users
 
-### `npm start`
+## How we built it
+- We built it using React, TailwindCSS, and the OpenAI API
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Accomplishments that we're proud of
+- Responsiveness and beautiful UI
+- Great teamwork
+- Learned Lots!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## What's next for Sproutful
+We plan on adding:
+- User authentication
+- Background music
+- Calendar page that keeps track of which days the user has done their breathing exercises
+- Sprout that turns unhealthy if the user has not watered it for a long time
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Build Instructions
+1. Clone our git repository: https://github.com/qvd808/journey-hack
+2. Run "npm install"
+3. Run "npm start"
+4. Go to localhost:3000 on your browser
+5. Enjoy our app!

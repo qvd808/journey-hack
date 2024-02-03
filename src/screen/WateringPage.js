@@ -1,9 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect, useRef } from "react";
 import lottie from "lottie-web";
-import Lottie from "lottie-react";
-import WateringAnimation from "./watering-animation.json";
 import { indexTree, setIndexTree, treeName } from "../data/data";
+import WaterBackground from "./backgroundWaterpage.jpeg";
 
 const WateringPage = () => {
   const [showAnimation, setShowAnimation] = useState(false);
@@ -21,8 +20,9 @@ const WateringPage = () => {
     "tree7.png",
   ];
 
-  const moveToMeditationPage = () => {
+  const moveToMeditationPage = (e) => {
     navigate("/meditation");
+    e.preventDefault();
   };
 
   const growTree = () => {
@@ -54,10 +54,10 @@ const WateringPage = () => {
   var str = "< Go back to meditation";
 
   return (
-    <div className="">
+    <div className="WateringPage overflow-hidden">
       <img
         className="h-screen w-full relative"
-        src="./wateringbackgroundimage.jpeg"
+        src={WaterBackground}
       ></img>
 
       <div className="absolute top-[5vh]">

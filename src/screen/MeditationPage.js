@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import { getGPTResponse } from "../api/gptAPI";
 import OpenAI from "openai";
 import { list_of_exercises } from "../api/listExercise";
 import { indexTree, treeName } from "../data/data";
@@ -29,8 +28,9 @@ const MeditationPage = () => {
 
   const navigate = useNavigate();
 
-  const moveToWateringPage = () => {
+  const moveToWateringPage = (e) => {
     navigate("/watering");
+    e.preventDefault();
   };
 
   function get_random(list) {
