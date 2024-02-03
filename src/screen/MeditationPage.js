@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 // import { getGPTResponse } from "../api/gptAPI";
 import OpenAI from "openai";
 import { list_of_exercises } from "../api/listExercise";
+import {indexTree} from "../data/data";
 
 const MeditationPage = () => {
   const [exercise, setExercise] = useState(() => {
@@ -14,6 +15,17 @@ const MeditationPage = () => {
     apiKey: process.env.REACT_APP_OPENAI_API_KEY,
     dangerouslyAllowBrowser: true,
   });
+
+  const list_of_tree = [
+    "tree1.png",
+    "tree2.png",
+    "tree3.png",
+    "tree4.png",
+    "tree5.png",
+    "tree6.png",
+    "tree7.png",
+  ];
+  const treeImagePath = list_of_tree[indexTree];
 
   const navigate = useNavigate();
 
@@ -97,7 +109,7 @@ const MeditationPage = () => {
 
         {/* <div className="absolute bottom-40 right-80">
           <div className="relative bottom-500 left-10">
-            <img src="tree1.png"></img>
+            <img src={treeImagePath}></img>
           </div>
         </div> */}
       </div>
