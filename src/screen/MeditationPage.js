@@ -82,8 +82,8 @@ const MeditationPage = () => {
       <div className="absolute top-0 left-0 w-screen">
         <div className="flex flex-row justify-center">
           <div className="border-2 border-black rounded-lg shadow-2xl w-4/5 bg-white p-2 my-5 font-bold text-center">
-            <p className="text-welcomeMeditate">{welcome}</p>
-            <p className="text-welcomeMeditate">
+            <p className="text-welcomeMeditate text-sm md:text-md">{welcome}</p>
+            <p className="text-welcomeMeditate text-sm md:text-md">
               After completing an exercise, take a moment to{" "}
               <span className="text-green-700">sprout</span> your tree in the
               watering page.
@@ -91,24 +91,57 @@ const MeditationPage = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 mt-[7%]">
-          <div className="relative w-96 border-2 border-black rounded-lg shadow-2xl bg-white align-self-start justify-self-center p-2 my-5 font-bold">
-            <p className="text-welcomeMeditate p-3">{exercise}</p>
+        <div className="grid grid-rows-2">
+          <div className="row-span-6">
+            <div className="flex flex-col items-center">
+              <div className="justify-self-center">
+                <img
+                  className="justify-self-center w-32 md:w-52"
+                  src={treeImagePath}
+                ></img>
+                <p className="justify-self-center font-bold text-amber-800 text-center text-xl">
+                  {treeName[indexTree]}
+                </p>
+              </div>
+              <div className="w-96 border-2 border-black rounded-lg shadow-2xl bg-white p-2 my-5 font-bold justify-self-center align-self-center">
+                <p className="text-welcomeMeditate p-3 text-sm md:text-md">
+                  {exercise}
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="justify-self-center" >
-          <img className="justify-self-center" src={treeImagePath}></img>
-          <p className="justify-self-center font-bold text-amber-800 text-center text-xl">{treeName[indexTree]}</p>
+          <div className="row-span-1">
+            <div className="flex flex-row justify-center mt-[5%] md:mt-[2%]">
+              <button
+                className="text-white border-2 border-black rounded-lg shadow-2xl bg-blue-500 font-bold p-3 text-sm md:text-md"
+                onClick={moveToWateringPage}
+              >
+                Go to the watering page
+              </button>
+            </div>
           </div>
         </div>
 
-        <div className="flex flex-row justify-center mt-[5%]">
+        {/* <div className="flex flex-col items-center">
+          <div className="justify-self-center">
+            <img className="justify-self-center" src={treeImagePath}></img>
+            <p className="justify-self-center font-bold text-amber-800 text-center text-xl">
+              {treeName[indexTree]}
+            </p>
+          </div>
+          <div className="w-96 border-2 border-black rounded-lg shadow-2xl bg-white p-2 my-5 font-bold justify-self-center align-self-center">
+            <p className="text-welcomeMeditate p-3">{exercise}</p>
+          </div>
+        </div> */}
+
+        {/* <div className="flex flex-row justify-center mt-[5%]">
           <button
             className="text-white border-2 border-black rounded-lg shadow-2xl bg-blue-500 font-bold p-3"
             onClick={moveToWateringPage}
           >
             Go to the watering page
           </button>
-        </div>
+        </div> */}
 
         {/* <div className="absolute bottom-40 right-80">
           <div className="relative bottom-500 left-10">

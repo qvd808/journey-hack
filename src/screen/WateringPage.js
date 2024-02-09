@@ -55,64 +55,93 @@ const WateringPage = () => {
 
   return (
     <div className="WateringPage overflow-hidden">
-      <img
-        className="h-screen w-full relative"
-        src={WaterBackground}
-      ></img>
+      <img className="h-screen w-full relative" src={WaterBackground}></img>
 
-      <div className="absolute top-[5vh]">
+      <div className="absolute top-[5vh] flex flex-col w-full">
         <div
-          className="ml-10 font-bold text-black border-2 border-black rounded-lg shadow-xl p-4 bg-white"
+          className="self-start ml-10 font-bold text-black border-2 border-black rounded-lg shadow-xl p-4 bg-white text-sm md:text-md"
           onClick={moveToMeditationPage}
         >
           {str}
         </div>
-      </div>
+        <div className="grid grid-rows-2">
+          <div className="row-span-6 self-start">
+            {showAnimation && (
+              <div className="absolute flex flex-row w-full justify-start md:justify-center">
+                {" "}
+                {/* Adjust these values */}
+                <div
+                  ref={container}
+                  id="animation-container "
+                  className="w-64 h-64 md:ml-[10%]"
+                  style={{ transform: "scaleX(1)" }}
+                ></div>
+              </div>
+            )}
 
-      <div className="absolute top-[100px] right-[200px] font-bold text-black border-2 border-black rounded-lg shadow-xl p-4 bg-white ">
-        <h1>Congratulations!</h1>
-        <h1>We hope you feel refreshed</h1>
-        <h1>with every breath.</h1>
-      </div>
-
-      {showButton &&
-        (indexTree === 6 ? (
-          <div
-            className="absolute top-[400px] left-[750px] font-bold text-white border-2 border-black rounded-lg shadow-xl p-4 bg-rose-700 "
-            onClick={growTree}
-          >
-            <button onClick={growTree}>{`Rebirth Tree`}</button>
+            {showButton ? (
+              indexTree === 6 ? (
+                <div
+                  className="flex w-full justify-center md:ml-[10%]"
+                  onClick={growTree}
+                >
+                  <button
+                    className="font-bold text-white text-center border-2 border-black rounded-lg shadow-xl p-4 bg-rose-700 self-center mt-[20%] text-sm md:text-md"
+                    onClick={growTree}
+                  >
+                    Rebirth Tree
+                  </button>
+                </div>
+              ) : (
+                <div
+                  className="flex w-full justify-center md:ml-[10%]"
+                  onClick={growTree}
+                >
+                  <button
+                    className="font-bold text-white text-center border-2 border-black rounded-lg shadow-xl p-4  bg-blue-500 self-start mt-[20%] text-sm md:text-md "
+                    onClick={growTree}
+                  >
+                    Water Tree
+                  </button>
+                </div>
+              )
+            ) : (
+              <div
+                className="invisible font-bold text-white border-2 border-black rounded-lg shadow-xl p-4 bg-blue-500 self-center mt-[20%] text-sm md:text-md"
+                onClick={growTree}
+              >
+                <button onClick={growTree}>{`Water Tree`}</button>
+              </div>
+            )}
+            <div className="grid grid-cols-2">
+              <div>
+                {" "}
+                <div className="hidden md:block row-span-1">
+                  <div className="font-bold text-black border-2 border-black rounded-lg shadow-xl p-4 bg-white self-center mx-[10%] mt-[5%] text-sm md:text-md md:mb-10">
+                    <h1>Congratulations!</h1>
+                    <h1>We hope you feel refreshed</h1>
+                    <h1>with every breath.</h1>
+                  </div>
+                </div>
+              </div>
+              <div>
+                {/* Keep the tree image at its original position */}
+                <div className="grid grid-rows-2 w-full justify-center">
+                  <img className="row-span-2 w-52" src={treeImagePath}></img>
+                  <p className="row-span-1 font-bold text-amber-800 text-center text-xl text-sm md:text-lg">
+                    {treeName[indexTree]}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        ) : (
-          <div
-            className="absolute top-[400px] left-[750px] font-bold text-white border-2 border-black rounded-lg shadow-xl p-4 bg-blue-500 "
-            onClick={growTree}
-          >
-            <button onClick={growTree}>{`Water Tree`}</button>
+          <div className="block md:hidden row-span-1">
+            <div className="font-bold text-black border-2 border-black rounded-lg shadow-xl p-4 bg-white self-center mx-[10%] mt-[5%] text-sm md:text-md md:mb-10">
+              <h1>Congratulations!</h1>
+              <h1>We hope you feel refreshed</h1>
+              <h1>with every breath.</h1>
+            </div>
           </div>
-        ))}
-
-      {/* Position the Lottie animation */}
-      {showAnimation && (
-        <div className="absolute bottom-[200px] right-[20px]">
-          {" "}
-          {/* Adjust these values */}
-          <div
-            ref={container}
-            id="animation-container"
-            className="w-64 h-64"
-            style={{ transform: "scaleX(-1)" }}
-          ></div>
-        </div>
-      )}
-
-      {/* Keep the tree image at its original position */}
-      <div className="absolute bottom-40 right-60">
-        <div className="relative bottom-500 left-10">
-          <img src={treeImagePath}></img>
-          <p className="relative bottom-500 left-0 font-bold text-amber-800 text-center text-xl">
-            {treeName[indexTree]}
-          </p>
         </div>
       </div>
     </div>
